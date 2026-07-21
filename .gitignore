@@ -1,0 +1,36 @@
+# Build and CMake
+build/
+CMakeUserPresets.json
+CMakeCache.txt
+
+# Python
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.python-version
+
+# Build artifacts
+*.o
+*.a
+*.elf
+*.uf2
+*.hex
+
+# IDE and editor files
+.vscode/launch.json
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+.env
+.env.local
