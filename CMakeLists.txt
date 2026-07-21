@@ -36,13 +36,13 @@ pico_sdk_init()
 add_executable(wii_pico_device)
 
 target_sources(wii_pico_device PUBLIC
-    ${CMAKE_CURRENT_LIST_DIR}/main.c
-    ${CMAKE_CURRENT_LIST_DIR}/usb_descriptors.c
-    ${CMAKE_CURRENT_LIST_DIR}/usb_protocol.c
+    ${CMAKE_CURRENT_LIST_DIR}/src/main.c
+    ${CMAKE_CURRENT_LIST_DIR}/src/usb_descriptors.c
+    ${CMAKE_CURRENT_LIST_DIR}/src/usb_protocol.c
     )
 
 target_include_directories(wii_pico_device PUBLIC
-    ${CMAKE_CURRENT_LIST_DIR})
+    ${CMAKE_CURRENT_LIST_DIR}/include)
 
 target_link_libraries(wii_pico_device PUBLIC pico_stdlib pico_unique_id tinyusb_device tinyusb_board)
 
