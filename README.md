@@ -4,9 +4,10 @@ This project is a TinyUSB vendor-class device for a Pico board. It does not perf
 
 ## Protocol Documentation
 
-**For complete USB protocol specification, see [USB_PROTOCOL.md](USB_PROTOCOL.md)**
+**For the complete USB protocol specification, see the
+[canonical specification in wii-installer-project](https://github.com/jdurkin2000/wii-installer-project/blob/main/USB_PROTOCOL.md).**
 
-This is the canonical source of truth for the USB protocol and should be referenced by all agents, developers, and tooling that interact with the Pico device.
+The shared specification is the source of truth for every component and tool that communicates with the Pico device.
 
 ## Quick Overview
 
@@ -26,7 +27,7 @@ The device exposes one vendor-specific interface with bulk OUT for commands and 
 - `0x04` Cancel job
 - `0x05` Reset job
 
-**Response Size:** 43 bytes (fixed)
+**Response Size:** 47 bytes (fixed)
 
 The submit-job command accepts metadata describing a job to be handled elsewhere. The `target` field can be a URL, path, archive name, file ID, or any other host-defined identifier. The device stores the identifier and tracks progress for the request.
 

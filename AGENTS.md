@@ -47,11 +47,13 @@ The device is a single vendor-specific USB interface with bulk IN/OUT endpoints.
 
 ## Protocol Notes
 
+- The canonical protocol specification is
+  [USB_PROTOCOL.md in wii-installer-project](https://github.com/jdurkin2000/wii-installer-project/blob/main/USB_PROTOCOL.md).
 - Command packets use a 4-byte header: command, protocol version, payload length.
 - The current protocol version is `1`.
 - Supported commands are submit job, query status, query progress, cancel job, and reset job.
-- Status packets are fixed-size and packed.
-- If you change the protocol, update `usb_protocol.h`, `tools/test_device.py`, and `README.md` together.
+- Status packets are fixed-size, packed 47-byte records.
+- If you change the protocol, update `usb_protocol.h`, `tools/test_device.py`, `README.md`, and the canonical specification together, then coordinate the corresponding host changes.
 
 ## Editing Guidance
 
